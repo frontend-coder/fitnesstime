@@ -1,0 +1,1355 @@
+@charset "UTF-8";
+/* // задать все переменные
+ */
+/* p {
+  @include font-size(20px);
+ } */
+/* p {
+  @include trans;
+ } */
+/* // как использовать */
+/* p {
+  @include trans;
+ } */
+/* // как использовать */
+/* p {
+  @include font-size(20px);
+ } */
+/*
+как перевести размеры контейнеров из пикселей
+в rem */
+/* .divigin {
+  width: pxrem(30px);
+} */
+/* если ширина контейнеров в % а отступы в пикселях
+20 пикселей - один отступ
+ */
+/* .grid-item {
+  width: calc((100% - 20px * 2) / 3);
+}
+ */
+/* Для 3-колоночной сетки  удвление отсупов если много строк в сетке*/
+/* .grid-item:nth-child(3n+3) {
+  margin-right: 0;
+  float: right;
+} */
+/* как использовать
+.nameclass {
+ @include triangle(25px, up, red);
+  @include triangle(25px, down, red);
+   @include triangle(100px, left, red);
+    @include triangle(100px, right, red);
+}
+ */
+/* как использовать
+.nameclass {
+ @include trianglelong(25px,40px, up, red);
+ @include trianglelong(25px,40px, down, red);
+ @include trianglelong(25px,40px, left, red);
+ @include trianglelong(25px,40px, right, red);
+
+}
+ */
+/* как создать треугольник легкий способ */
+/* как использовать
+.nameclass {
+ @include trianglelight(25px, 25px, up, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, dawn, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, left, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, right, 50px, 50px, #0489B1);
+
+ */
+/* как использовать
+.nameclass {
+ @include triangle_in_corner(25px, topleft, red);
+    @include triangle_in_corner(100px, topright, red);
+
+ @include triangle_in_corner(25px, bottomleft, red);
+  @include triangle_in_corner(25px, bottomright, red);
+
+}
+ */
+/*все переменные и моды */
+/*  width: $block_width - ( 5px * 2 ) - ( 1px * 2 ); */
+/* как сделать миксинг */
+/*  @mixin large-text {
+   font: {
+     family: Arial;
+     size: 20px;
+    weight: bold;
+   }
+  color: #ff0000;
+ } */
+/* как использовать миксинг */
+/*  .page-title {
+  @include large-text;
+  padding: 4px;
+  margin-top: 10px;
+ } */
+*::-webkit-input-placeholder {
+  color: #202020;
+  opacity: 1; }
+
+*:-moz-placeholder {
+  color: #202020;
+  opacity: 1; }
+
+*::-moz-placeholder {
+  color: #202020;
+  opacity: 1; }
+
+*:-ms-input-placeholder {
+  color: #202020;
+  opacity: 1; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  /*   padding: 0;
+  margin: 0; */ }
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  /* height: 100%; */
+  font-size: 16px;
+  line-height: 1.42;
+  margin: 0;
+  padding: 0;
+  -webkit-backface-visibility: hidden;
+  /* overflow-x: hidden; */ }
+
+body {
+  font-family: "OpenSansRegular", sans-serif;
+  font-size: 16px;
+  line-height: 1.42;
+  position: relative;
+  min-width: 320px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  opacity: 1;
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: antialised;
+  overflow-x: hidden; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+a {
+  outline: 0;
+  text-decoration: none; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style-type: none; }
+
+.img-responsive {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.hidden {
+  display: none; }
+
+/* // задать все переменные
+ */
+/* p {
+  @include font-size(20px);
+ } */
+/* p {
+  @include trans;
+ } */
+/* // как использовать */
+/* p {
+  @include trans;
+ } */
+/* // как использовать */
+/* p {
+  @include font-size(20px);
+ } */
+/*
+как перевести размеры контейнеров из пикселей
+в rem */
+/* .divigin {
+  width: pxrem(30px);
+} */
+/* если ширина контейнеров в % а отступы в пикселях
+20 пикселей - один отступ
+ */
+/* .grid-item {
+  width: calc((100% - 20px * 2) / 3);
+}
+ */
+/* Для 3-колоночной сетки  удвление отсупов если много строк в сетке*/
+/* .grid-item:nth-child(3n+3) {
+  margin-right: 0;
+  float: right;
+} */
+/* как использовать
+.nameclass {
+ @include triangle(25px, up, red);
+  @include triangle(25px, down, red);
+   @include triangle(100px, left, red);
+    @include triangle(100px, right, red);
+}
+ */
+/* как использовать
+.nameclass {
+ @include trianglelong(25px,40px, up, red);
+ @include trianglelong(25px,40px, down, red);
+ @include trianglelong(25px,40px, left, red);
+ @include trianglelong(25px,40px, right, red);
+
+}
+ */
+/* как создать треугольник легкий способ */
+/* как использовать
+.nameclass {
+ @include trianglelight(25px, 25px, up, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, dawn, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, left, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, right, 50px, 50px, #0489B1);
+
+ */
+/* как использовать
+.nameclass {
+ @include triangle_in_corner(25px, topleft, red);
+    @include triangle_in_corner(100px, topright, red);
+
+ @include triangle_in_corner(25px, bottomleft, red);
+  @include triangle_in_corner(25px, bottomright, red);
+
+}
+ */
+/*все переменные и моды */
+/*  width: $block_width - ( 5px * 2 ) - ( 1px * 2 ); */
+/* как сделать миксинг */
+/*  @mixin large-text {
+   font: {
+     family: Arial;
+     size: 20px;
+    weight: bold;
+   }
+  color: #ff0000;
+ } */
+/* как использовать миксинг */
+/*  .page-title {
+  @include large-text;
+  padding: 4px;
+  margin-top: 10px;
+ } */
+/* font-family: "OswaldBold"; */
+@font-face {
+  font-family: "OswaldBold";
+  src: url("../fonts/OswaldBold/Oswald-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/OswaldBold/Oswald-Bold.woff") format("woff"), url("../fonts/OswaldBold/Oswald-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+/* font-family: "OswaldRegular"; */
+@font-face {
+  font-family: "OswaldRegular";
+  src: url("../fonts/OswaldRegular/Oswald-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/OswaldRegular/Oswald-Regular.woff") format("woff"), url("../fonts/OswaldRegular/Oswald-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+/* font-family: "OswaldRegular"; */
+@font-face {
+  font-family: "OpenSansLight";
+  src: url("../fonts/OpenSansLight/OpenSansLight.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansLight/OpenSansLight.woff") format("woff"), url("../fonts/OpenSansLight/OpenSansLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+/* font-family: "OpenSansRegular"; */
+@font-face {
+  font-family: "OpenSansRegular";
+  src: url("../fonts/OpenSansRegular/OpenSansRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"), url("../fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+/* font-family: "RalewayExtraBold"; */
+@font-face {
+  font-family: "RalewayExtraBold";
+  src: url("../fonts/RalewayExtraBold/RalewayExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RalewayExtraBold/RalewayExtraBold.woff") format("woff"), url("../fonts/RalewayExtraBold/RalewayExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+/* // задать все переменные
+ */
+/* p {
+  @include font-size(20px);
+ } */
+/* p {
+  @include trans;
+ } */
+/* // как использовать */
+/* p {
+  @include trans;
+ } */
+/* // как использовать */
+/* p {
+  @include font-size(20px);
+ } */
+/*
+как перевести размеры контейнеров из пикселей
+в rem */
+/* .divigin {
+  width: pxrem(30px);
+} */
+/* если ширина контейнеров в % а отступы в пикселях
+20 пикселей - один отступ
+ */
+/* .grid-item {
+  width: calc((100% - 20px * 2) / 3);
+}
+ */
+/* Для 3-колоночной сетки  удвление отсупов если много строк в сетке*/
+/* .grid-item:nth-child(3n+3) {
+  margin-right: 0;
+  float: right;
+} */
+/* как использовать
+.nameclass {
+ @include triangle(25px, up, red);
+  @include triangle(25px, down, red);
+   @include triangle(100px, left, red);
+    @include triangle(100px, right, red);
+}
+ */
+/* как использовать
+.nameclass {
+ @include trianglelong(25px,40px, up, red);
+ @include trianglelong(25px,40px, down, red);
+ @include trianglelong(25px,40px, left, red);
+ @include trianglelong(25px,40px, right, red);
+
+}
+ */
+/* как создать треугольник легкий способ */
+/* как использовать
+.nameclass {
+ @include trianglelight(25px, 25px, up, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, dawn, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, left, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, right, 50px, 50px, #0489B1);
+
+ */
+/* как использовать
+.nameclass {
+ @include triangle_in_corner(25px, topleft, red);
+    @include triangle_in_corner(100px, topright, red);
+
+ @include triangle_in_corner(25px, bottomleft, red);
+  @include triangle_in_corner(25px, bottomright, red);
+
+}
+ */
+/*все переменные и моды */
+/*  width: $block_width - ( 5px * 2 ) - ( 1px * 2 ); */
+/* как сделать миксинг */
+/*  @mixin large-text {
+   font: {
+     family: Arial;
+     size: 20px;
+    weight: bold;
+   }
+  color: #ff0000;
+ } */
+/* как использовать миксинг */
+/*  .page-title {
+  @include large-text;
+  padding: 4px;
+  margin-top: 10px;
+ } */
+.header_img {
+  background: #000 url("../images/slide1.jpg") center center no-repeat;
+  min-height: 581px;
+  -webkit-background-size: cover;
+          background-size: cover; }
+
+.top_line {
+  background-color: #202020;
+  height: 100px;
+  width: 100%;
+  position: fixed; }
+
+.top_line_box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.top_line_logo {
+  font-family: "RalewayExtraBold, sans-serif";
+  /*  // font-size: $size; */
+  font-size: 1.5rem;
+  color: #fff; }
+
+.top_line_menu {
+  padding: 0;
+  margin: 0; }
+
+.top_line_menu ul li {
+  display: inline-block; }
+
+.top_line_menu ul li a {
+  display: block;
+  color: #fff;
+  padding: 10px 15px;
+  font-family: "OswaldRegular", sans-serif;
+  /*  // font-size: $size; */
+  font-size: 0.875rem;
+  line-height: 24px/14px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.top_line_menu ul li a:hover {
+  background-color: #e25050; }
+
+.slider_content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 481px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.slider_content_box {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-family: "OswaldBold", sans-serif;
+  text-transform: uppercase; }
+
+.slider_title {
+  /*  // font-size: $size; */
+  font-size: 0.75rem;
+  line-height: 24/12;
+  padding: 12px 6px 12px 13px;
+  background-color: #bd4141;
+  margin-bottom: 2px; }
+
+.slider_name {
+  /*  // font-size: $size; */
+  font-size: 1.875rem;
+  padding: 20px 12px 20px 21px;
+  background-color: #353535;
+  margin-bottom: 2px; }
+
+.slider_rest {
+  /*  // font-size: $size; */
+  font-size: 1.125rem;
+  line-height: 24/18;
+  background-color: #353535;
+  padding: 14px 24px 14px 24px; }
+
+.block_h {
+  height: 10000px;
+  background-color: blue; }
+
+/* // задать все переменные
+ */
+/* p {
+  @include font-size(20px);
+ } */
+/* p {
+  @include trans;
+ } */
+/* // как использовать */
+/* p {
+  @include trans;
+ } */
+/* // как использовать */
+/* p {
+  @include font-size(20px);
+ } */
+/*
+как перевести размеры контейнеров из пикселей
+в rem */
+/* .divigin {
+  width: pxrem(30px);
+} */
+/* если ширина контейнеров в % а отступы в пикселях
+20 пикселей - один отступ
+ */
+/* .grid-item {
+  width: calc((100% - 20px * 2) / 3);
+}
+ */
+/* Для 3-колоночной сетки  удвление отсупов если много строк в сетке*/
+/* .grid-item:nth-child(3n+3) {
+  margin-right: 0;
+  float: right;
+} */
+/* как использовать
+.nameclass {
+ @include triangle(25px, up, red);
+  @include triangle(25px, down, red);
+   @include triangle(100px, left, red);
+    @include triangle(100px, right, red);
+}
+ */
+/* как использовать
+.nameclass {
+ @include trianglelong(25px,40px, up, red);
+ @include trianglelong(25px,40px, down, red);
+ @include trianglelong(25px,40px, left, red);
+ @include trianglelong(25px,40px, right, red);
+
+}
+ */
+/* как создать треугольник легкий способ */
+/* как использовать
+.nameclass {
+ @include trianglelight(25px, 25px, up, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, dawn, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, left, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, right, 50px, 50px, #0489B1);
+
+ */
+/* как использовать
+.nameclass {
+ @include triangle_in_corner(25px, topleft, red);
+    @include triangle_in_corner(100px, topright, red);
+
+ @include triangle_in_corner(25px, bottomleft, red);
+  @include triangle_in_corner(25px, bottomright, red);
+
+}
+ */
+/*все переменные и моды */
+/*  width: $block_width - ( 5px * 2 ) - ( 1px * 2 ); */
+/* как сделать миксинг */
+/*  @mixin large-text {
+   font: {
+     family: Arial;
+     size: 20px;
+    weight: bold;
+   }
+  color: #ff0000;
+ } */
+/* как использовать миксинг */
+/*  .page-title {
+  @include large-text;
+  padding: 4px;
+  margin-top: 10px;
+ } */
+/* оформление содержимого над самой нартикой ниже top line */
+.block {
+  padding: 60px 0; }
+
+.block_title {
+  text-align: center; }
+
+.block_title h2 {
+  font-family: "OswaldBold", sans-serif;
+  /*  // font-size: $size; */
+  font-size: 1.875rem;
+  color: #202020;
+  text-transform: uppercase;
+  margin-bottom: 18px; }
+
+.block_title h2 span {
+  color: #e25050; }
+
+.block_descr {
+  color: #a2a2a2;
+  text-align: center;
+  /*  // font-size: $size; */
+  font-size: 1rem;
+  margin-bottom: 45px; }
+
+/*  3 тумб преимуществ в ряд */
+ul.tambl_row-three {
+  margin: 0;
+  margin-bottom: -1%;
+  margin-left: -1%;
+  padding: 0;
+  list-style-type: none; }
+
+.tambl_item-three {
+  float: left;
+  width: 32.33333%;
+  margin-bottom: 1%;
+  margin-left: 1%;
+  padding: 10px 5px;
+  text-align: center; }
+
+.tambl_item-h {
+  margin-bottom: 60px; }
+
+.tambl-title {
+  text-transform: uppercase;
+  color: #202020;
+  font-family: "OswaldBold", sans-serif;
+  /*  // font-size: $size; */
+  font-size: 1.125rem;
+  margin: 10px 0 30px 0; }
+
+.title-text p {
+  /*  // font-size: $size; */
+  font-size: 0.8125rem;
+  color: #a2a2a2;
+  margin-bottom: 30px; }
+
+.title-text p:last-child {
+  margin-bottom: 0; }
+
+.icon {
+  background: url(../images/sprite.png) no-repeat;
+  display: inline-block; }
+
+.icon-barket {
+  background-position: 0px -162px;
+  width: 74px;
+  height: 93px; }
+
+.icon-document {
+  background-position: 0px -375px;
+  width: 74px;
+  height: 93px; }
+
+.icon-finger_up {
+  background-position: 0px -588px;
+  width: 74px;
+  height: 93px; }
+
+.icon-flug {
+  background-position: 0px -801px;
+  width: 74px;
+  height: 93px; }
+
+.icon-heart {
+  background-position: 0px -1014px;
+  width: 74px;
+  height: 93px; }
+
+.icon-magnify {
+  background-position: 0px 0px;
+  width: 42px;
+  height: 42px; }
+
+.icon-medicin {
+  background-position: 0px -1227px;
+  width: 74px;
+  height: 93px; }
+
+/* // блок с тренерами */
+.trainer_fon {
+  background: #000 url("../images/fon_trainers.jpg") center center no-repeat;
+  min-height: 581px;
+  -webkit-background-size: cover;
+          background-size: cover; }
+
+.trainer_fon .block_title h2,
+.galary .block_title h2,
+.price_fon .block_title h2 {
+  color: #fff;
+  position: relative;
+  text-align: center;
+  margin-bottom: 65px; }
+
+.galary .block_title h2 {
+  color: #202020;
+  margin-bottom: 35px; }
+
+.trainer_fon .block_title h2:before,
+.price_fon .block_title h2:before,
+.galary .block_title h2:before {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 1px;
+  background-color: #fff;
+  left: 50%;
+  bottom: -8px;
+  margin-left: -22px;
+  text-align: center; }
+
+.galary .block_title h2:before {
+  background-color: #202020; }
+
+.galary .block_descr {
+  margin-bottom: 70px; }
+
+/*  4 тумб преимуществ в ряд */
+ul.tambl_row-four {
+  margin: 0;
+  margin-bottom: -2%;
+  margin-left: -2%;
+  padding: 0;
+  list-style-type: none; }
+
+.tambl_item-four {
+  float: left;
+  width: 23%;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  padding: 0;
+  text-align: center;
+  background-color: #fff; }
+
+.tambl_item-four:hover {
+  background-color: #fff; }
+
+.trainer_item {
+  padding: 0;
+  margin: 0; }
+
+.trainer_item img {
+  width: 100%;
+  height: auto; }
+
+.trainer_item_text {
+  height: 70px;
+  margin: 0;
+  background-color: #fff;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+.trainer_item_box {
+  padding-left: 18px; }
+
+.trainer_item_name {
+  /*  // font-size: $size; */
+  font-size: 0.875rem;
+  line-height: 1.71429;
+  font-family: "OswaldBold", sans-serif;
+  color: #202020;
+  margin-bottom: 9px; }
+
+.trainer_item_prof {
+  color: #afafaf;
+  text-align: left;
+  /*  // font-size: $size; */
+  font-size: 0.75rem;
+  font-family: "OswaldRegular", sans-serif; }
+
+.galary .tambl_item-four .trainer_item_box {
+  padding-left: 0; }
+
+.galary .tambl_item-four .trainer_item_box .trainer_item_name {
+  text-align: left; }
+
+/* оформление цен */
+.price_fon {
+  background: #e25050; }
+
+.price_fon_item {
+  background: #d14343;
+  color: #fff;
+  border: 1px solid transparent;
+  padding: 45px 60px 50px 60px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.price_fon_item:hover {
+  border: 1px solid #fff;
+  background-color: transparent; }
+
+.price_title, .price_number {
+  font-family: "OswaldBold", sans-serif;
+  /*  // font-size: $size; */
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  margin-bottom: 50px; }
+
+.price_number {
+  /*  // font-size: $size; */
+  font-size: 2.25rem; }
+
+.price_block {
+  /*  // font-size: $size; */
+  font-size: 0.875rem; }
+
+.price_block ul li {
+  margin-bottom: 24px; }
+
+.price_block ul li .fa {
+  margin-right: 11px;
+  font-weight: 200; }
+
+.price_buton {
+  display: inline-block;
+  padding: 14px 24px;
+  background: #e25050;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  /*  // font-size: $size; */
+  font-size: 1.125rem;
+  font-family: "OswaldBold", sans-serif;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  cursor: pointer; }
+
+.price_fon_item:hover .price_buton,
+.price_buton:hover {
+  background: #fff;
+  color: #e25050; }
+
+.social_block {
+  background-color: #202020; }
+
+.social_box {
+  padding: 30px 0;
+  border-bottom: 1px solid #323232;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.social_links {
+  padding: 0; }
+
+.social_links ul li {
+  display: inline-block; }
+
+.social_links ul li a {
+  /*  // font-size: $size; */
+  font-size: 0.8125rem;
+  padding: 7px;
+  color: #fff;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.social_links ul li a:hover {
+  color: #e25050; }
+
+.twitter_block {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+.twitter_block_icon {
+  -ms-align-self: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  width: 20px;
+  height: 20px;
+  color: #fff; }
+
+.twitter_block_text {
+  width: 570px;
+  padding-left: 10px;
+  color: #fff;
+  /*  // font-size: $size; */
+  font-size: 0.8125rem;
+  font-family: "OpenSansLight", sans-serif; }
+
+.twitter_block_text span {
+  color: #717171; }
+
+.footer-fon {
+  background: #202020 url("../images/foter_fon_map.png") center center no-repeat;
+  min-height: 420px;
+  -webkit-background-size: cover;
+          background-size: cover;
+  position: relative; }
+
+.footer-fon:before {
+  position: absolute;
+  content: "";
+  background: rgba(32, 32, 32, 0.2);
+  width: 100%;
+  height: 100%; }
+
+.footer_box {
+  padding: 0;
+  margin: 60px 0 100px 0; }
+
+.footer_left {
+  float: left;
+  width: 30%; }
+
+.footer_right {
+  float: left;
+  width: 70%; }
+
+.footer_title {
+  font-family: "OswaldBold", sans-serif;
+  /*  // font-size: $size; */
+  font-size: 0.875rem;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 25px; }
+
+.footer_text {
+  font-family: "OpenSansLight", sans-serif;
+  /*  // font-size: $size; */
+  font-size: 0.75rem;
+  line-height: 1.75;
+  color: #c6c6c6; }
+
+/* // задать все переменные
+ */
+/* p {
+  @include font-size(20px);
+ } */
+/* p {
+  @include trans;
+ } */
+/* // как использовать */
+/* p {
+  @include trans;
+ } */
+/* // как использовать */
+/* p {
+  @include font-size(20px);
+ } */
+/*
+как перевести размеры контейнеров из пикселей
+в rem */
+/* .divigin {
+  width: pxrem(30px);
+} */
+/* если ширина контейнеров в % а отступы в пикселях
+20 пикселей - один отступ
+ */
+/* .grid-item {
+  width: calc((100% - 20px * 2) / 3);
+}
+ */
+/* Для 3-колоночной сетки  удвление отсупов если много строк в сетке*/
+/* .grid-item:nth-child(3n+3) {
+  margin-right: 0;
+  float: right;
+} */
+/* как использовать
+.nameclass {
+ @include triangle(25px, up, red);
+  @include triangle(25px, down, red);
+   @include triangle(100px, left, red);
+    @include triangle(100px, right, red);
+}
+ */
+/* как использовать
+.nameclass {
+ @include trianglelong(25px,40px, up, red);
+ @include trianglelong(25px,40px, down, red);
+ @include trianglelong(25px,40px, left, red);
+ @include trianglelong(25px,40px, right, red);
+
+}
+ */
+/* как создать треугольник легкий способ */
+/* как использовать
+.nameclass {
+ @include trianglelight(25px, 25px, up, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, dawn, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, left, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, right, 50px, 50px, #0489B1);
+
+ */
+/* как использовать
+.nameclass {
+ @include triangle_in_corner(25px, topleft, red);
+    @include triangle_in_corner(100px, topright, red);
+
+ @include triangle_in_corner(25px, bottomleft, red);
+  @include triangle_in_corner(25px, bottomright, red);
+
+}
+ */
+/*все переменные и моды */
+/*  width: $block_width - ( 5px * 2 ) - ( 1px * 2 ); */
+/* как сделать миксинг */
+/*  @mixin large-text {
+   font: {
+     family: Arial;
+     size: 20px;
+    weight: bold;
+   }
+  color: #ff0000;
+ } */
+/* как использовать миксинг */
+/*  .page-title {
+  @include large-text;
+  padding: 4px;
+  margin-top: 10px;
+ } */
+/* // @import '_vseforms.scss'; */
+/* // задать все переменные
+ */
+/* p {
+  @include font-size(20px);
+ } */
+/* p {
+  @include trans;
+ } */
+/* // как использовать */
+/* p {
+  @include trans;
+ } */
+/* // как использовать */
+/* p {
+  @include font-size(20px);
+ } */
+/*
+как перевести размеры контейнеров из пикселей
+в rem */
+/* .divigin {
+  width: pxrem(30px);
+} */
+/* если ширина контейнеров в % а отступы в пикселях
+20 пикселей - один отступ
+ */
+/* .grid-item {
+  width: calc((100% - 20px * 2) / 3);
+}
+ */
+/* Для 3-колоночной сетки  удвление отсупов если много строк в сетке*/
+/* .grid-item:nth-child(3n+3) {
+  margin-right: 0;
+  float: right;
+} */
+/* как использовать
+.nameclass {
+ @include triangle(25px, up, red);
+  @include triangle(25px, down, red);
+   @include triangle(100px, left, red);
+    @include triangle(100px, right, red);
+}
+ */
+/* как использовать
+.nameclass {
+ @include trianglelong(25px,40px, up, red);
+ @include trianglelong(25px,40px, down, red);
+ @include trianglelong(25px,40px, left, red);
+ @include trianglelong(25px,40px, right, red);
+
+}
+ */
+/* как создать треугольник легкий способ */
+/* как использовать
+.nameclass {
+ @include trianglelight(25px, 25px, up, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, dawn, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, left, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, right, 50px, 50px, #0489B1);
+
+ */
+/* как использовать
+.nameclass {
+ @include triangle_in_corner(25px, topleft, red);
+    @include triangle_in_corner(100px, topright, red);
+
+ @include triangle_in_corner(25px, bottomleft, red);
+  @include triangle_in_corner(25px, bottomright, red);
+
+}
+ */
+/*все переменные и моды */
+/*  width: $block_width - ( 5px * 2 ) - ( 1px * 2 ); */
+/* как сделать миксинг */
+/*  @mixin large-text {
+   font: {
+     family: Arial;
+     size: 20px;
+    weight: bold;
+   }
+  color: #ff0000;
+ } */
+/* как использовать миксинг */
+/*  .page-title {
+  @include large-text;
+  padding: 4px;
+  margin-top: 10px;
+ } */
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 1170px; }
+  .hidden_mnu {
+    display: none; } }
+
+@media only screen and (max-width: 1190px) {
+  .container {
+    width: 1170px; } }
+
+@media screen and (max-width: 1080px) {
+  .container {
+    width: 1060px; } }
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 1004px; }
+  .price_items_price {
+    font-size: 4.6rem; }
+  .adwise_autor_foto {
+    float: none;
+    margin: 0 auto; }
+  .adwise_autor_texting {
+    float: none; }
+  .adwise_text:before {
+    left: 50%;
+    margin-left: -16px; }
+  .sub_list_description {
+    margin-left: 22px;
+    width: 420px; } }
+
+@media only screen and (max-width: 992px) {
+  .container {
+    width: 970px; } }
+
+@media only screen and (max-width: 800px) {
+  .container {
+    width: 780px; } }
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 750px; }
+  .top_content_left,
+  .top_content_right {
+    float: none;
+    width: 90%;
+    margin: 0 auto; }
+  .buton_box {
+    text-align: center;
+    margin-bottom: 40px; }
+  .content_tabs_left, .content_tabs_right {
+    float: none;
+    width: 100%; }
+  .content_tabs_left {
+    padding: 0 0 0 30px; }
+  .content_tabs_right {
+    display: none; }
+  .price_items_price {
+    font-size: 3.20rem; }
+  .hidden_mnu {
+    display: none; }
+  /*Disable Animation on Mobile Devices*/
+  .animated {
+    /*CSS transitions*/
+    -o-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    /*CSS transforms*/
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    /*CSS animations*/
+    -webkit-animation: none !important;
+    animation: none !important; } }
+
+@media only screen and (max-width: 736px) {
+  .container {
+    width: 716px; }
+  .top_line_menu ul li a {
+    padding: 25px 20px; }
+  .mobile_block_menu {
+    display: block; } }
+
+@media only screen and (max-width: 667px) {
+  .container {
+    width: 647px; }
+  .top_line_menu {
+    display: none; }
+  .price_box {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .price_box_items {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px; }
+  .price_box_items:last-child {
+    margin-bottom: 0; }
+  .mobile_block_menu {
+    display: block;
+    width: 40px;
+    height: 40px; }
+  .forms-call input[type=submit] {
+    margin-top: 20px; }
+  .mobile_block_menu {
+    display: block; } }
+
+@media only screen and (max-width: 640px) {
+  .container {
+    width: 620px; } }
+
+@media only screen and (max-width: 600px) {
+  .block {
+    padding: 50px 0 50px 0; }
+  .container {
+    width: 580px; }
+  .top_content_left h2, .block_title h2 {
+    font-size: 2.0rem; }
+  .awesome_item, .adwise_item, .social_box_descr,
+  .social_box_links {
+    width: 100%;
+    float: none;
+    margin-bottom: 20px; }
+  .social_box_descr,
+  .social_box_links {
+    margin-bottom: 0; }
+  .awesome_item:last-child, .adwise_item:last-child {
+    margin-bottom: 0; }
+  .adwise_autor_texting {
+    margin: 0 auto; }
+  .content_tabs_left h2 {
+    margin-bottom: 30px; }
+  .content_tabs_left {
+    padding: 0 0 0 15px; } }
+
+@media only screen and (max-width: 568px) {
+  .container {
+    width: 548px; }
+  .social_box_links ul li a, .social_footer_links ul li a {
+    font-size: 2.7rem; }
+  .jq-tab-menu {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 100%;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%; }
+  .jq-tab-content-wrapper {
+    margin-top: 20px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 100%;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%; }
+  .jq-tab-content {
+    padding: 0 5px; }
+  .jq-tab-menu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .block_deskr {
+    margin-bottom: 40px; } }
+
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 460px; } }
+
+@media only screen and (max-width: 425px) {
+  .container {
+    width: 405px; } }
+
+@media only screen and (max-width: 414px) {
+  .top_content {
+    padding: 17% 0; }
+  .container {
+    width: 394px; }
+  .top_content_right {
+    width: 100%; }
+  .jq-tab-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .sub_list_description {
+    margin-left: 22px;
+    width: 305px; }
+  .social_box_links ul li a, .social_footer_links ul li a {
+    font-size: 1.90rem;
+    padding: 10px; }
+  .top_content_left h2,
+  .block_title h2 {
+    font-size: 1.5rem; }
+  .top_content_left h1 {
+    font-size: 3.0rem;
+    margin-bottom: 20px; }
+  .top_content_left h3 {
+    font-size: 0.8rem; }
+  .buton_box {
+    margin-bottom: 20px; }
+  .forms-call {
+    width: 330px; }
+  .top_content_left h2:before {
+    bottom: -30px; }
+  .forms-call h3 {
+    padding: 15px 0; }
+  .forms-call input[type=text], .forms-call input[type=email], .forms-call input[type=password] {
+    margin: 15px auto; }
+  .block_deskr {
+    margin-bottom: 40px; }
+  #contact .forms-call input[type=submit] {
+    width: 45%; } }
+
+@media only screen and (max-width: 384px) {
+  .container {
+    width: 364px; }
+  .top_content {
+    padding: 22% 0; }
+  .social_box_links ul li a, .social_footer_links ul li a {
+    font-size: 1.60rem; }
+  .sub_list_description {
+    width: 275px; } }
+
+@media only screen and (max-width: 360px) {
+  .container {
+    width: 340px; } }
+
+@media only screen and (max-width: 320px) {
+  .container {
+    width: 310px; }
+  .forms-call {
+    width: 280px; }
+  .top_content_left h2, .block_title h2 {
+    font-size: 1.2rem; }
+  .social_box_links ul li a, .social_footer_links ul li a {
+    font-size: 1.90rem;
+    padding: 21px; }
+  .social_box_links ul li a, .social_footer_links ul li a {
+    font-size: 1.60rem;
+    padding: 21px; }
+  .social_box_links ul li:first-child {
+    margin-bottom: 10px; }
+  .sub_list_description {
+    width: 231px;
+    margin-left: 12px; } }
+
+/*# sourceMappingURL=main.min.css.map */

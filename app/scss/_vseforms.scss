@@ -1,0 +1,326 @@
+@import '_var.scss';
+/* стили формы обратной связи */
+
+.forms-call {
+  width: 360px;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+
+background-color: #fff;
+border-radius: 10px;
+overflow: hidden;
+}
+.forms-call h3 {
+  padding: 20px 0;
+  background-color: #f5f5f5;
+text-align: center;
+@include font-size(20px);
+color: $h3_color;
+
+
+}
+
+.forms-call h3 span {
+color:$orange_fonts;
+text-transform: uppercase;
+}
+  .forms-call label{
+  margin:10px 0;
+display:block;
+}
+.forms-call input[type=submit]{
+width: 100%;
+font-family: "OpenSansSemiBold",sans-serif;
+@include font-size(15px);
+ text-align: center;
+background-color: $orange_fonts;
+border: 0;
+outline: 0;
+padding: 20px 0;
+margin-bottom: 0;
+cursor: pointer;
+color: #fff;
+margin-top: 47px;
+}
+
+
+
+
+
+
+
+
+.forms-call input[type=text],
+.forms-call input[type=email],
+.forms-call input[type=password] {
+display:block;
+width:300px;
+margin:30px auto 0;
+height:32px;
+@include font-size(14px);
+line-height: 32px;
+border: none;
+border-bottom: 1px solid $color_form;
+  color: $black-color;
+/* border:1px solid $button-hover; */
+text-indent:10px;
+
+/* // color:$button-hover;
+ */}
+.forms-call input:focus {
+border: none;
+border-bottom: 1px solid #f05d72;
+
+}
+.button-call{
+  text-align:right;
+margin: 0;
+float: right;
+}
+
+/*оформление всплывающей формы а ниже и благодарности */
+.forms-calldecor {
+max-width: 480px;
+position: relative;
+border: 2px solid  #f5f5f5;
+background-color:rgba(255, 255, 255, 0.99);
+-webkit-transition:all 0.5s ease;
+-moz-transition: all 0.5s else;
+ transition: all 0.5s else;
+overflow: hidden;
+margin: auto;
+border-radius: 10px;
+/* border: 1px solid $button-hover; */
+}
+.forms-calldecor img {
+  width: 100%;
+  height: auto;
+}
+.forms-calldecor h4 {
+/* color: $button-hover; */
+text-align: center;
+margin-bottom: 30px;
+background-color: #f5f5f5;
+text-align: center;
+font-size: 1.25rem;
+color: #333333;
+padding: 20px 0;
+}
+
+
+.forms-calldecor input {
+width: 90%;
+/* color:lighten($button-hover, 20%); */
+}
+
+.forms-calldecor .button-call {
+float: none;
+text-align: center;
+color: #fff;
+margin-bottom: 20px;
+}
+.forms-calldecor .button-call .get-buttons {
+  display: inline-block;
+background-color: $orange_fonts;
+text-align: center;
+border: 0;
+outline: 0;
+padding: 15px 25px;
+border-radius: 5px;
+ @include font-size(15px);
+ color: #fff;
+  font-family: "OpenSansSemiBold", sans-serif;
+box-shadow: 1px 3px 3px 1px rgba(#000, 0.15);
+cursor: pointer;
+  @include trans;
+
+}
+.forms-calldecor .button-call .get-buttons:hover,
+ .forms-calldecor .button-call .get-buttons:active
+ {
+ color: #ffffe4;
+ }
+
+.forms-calldecor .mfp-close
+{
+position: absolute;
+right: -8px;
+  @include font-size(30px);
+top: -6px;
+border-radius: 3px;
+-moz-transition: all .75s ease;
+-webkit-transition: all .75s ease;
+transition: all .75s ease;
+}
+.forms-calldecor .mfp-close:hover {
+color:red;
+-moz-transform: rotate(45deg);  /* Firefox */
+-o-transform: rotate(45deg);  /* Opera */
+-webkit-transform: rotate(45deg);  /* Safari y Chrome */
+filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476); /* IE */
+}
+
+.forms-calldecor .mfp-close-btn-in .mfp-close {
+color: #fff;
+font-size: 22.5em;
+font-weight: bold;
+border-radius: 3px;
+}
+.mfp-bg {
+background: #fff;
+}
+
+.forms-calldecor .success {
+ color: #fff;
+/* background-color: $button-hover; */
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.forms-calldecor .success.active{
+top: 0;
+opacity: 1;
+}
+
+.forms-calldecor .success p {
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  color: #fff;
+  font-size: 20px;
+  margin: auto;
+  text-align: center; }
+
+/* // долюно работать анимация всплывашки */
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.615s ease-out;
+  -o-transition: all 0.615s ease-out;
+  transition: all 0.615s ease-out; }
+
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8; }
+
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0; }
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0; }
+
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+  -webkit-transition: all 0.615s ease-out;
+  -o-transition: all 0.615s ease-out;
+  transition: all 0.615s ease-out;
+  -webkit-transform: translateY(1%);
+  -ms-transform: translateY(1%);
+  transform: translateY(1%); }
+
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+  -webkit-transform: translateY(-120%);
+  -ms-transform: translateY(-120%);
+  transform: translateY(-120%);
+}
+
+.footer_fob {
+  width: 100%;
+}
+
+.forms-call input[type=text],
+.forms-call input[type=email],
+.forms-call input[type=password] {
+width: 90%;
+margin:30px auto;
+}
+
+.forms-call textarea.messege {
+height: 157px;
+width: 90%;
+margin:30px auto 0;
+font-size: 0.875rem;
+font-family: "OpenSansRegular", sans-serif;
+border: none;
+border-bottom: 1px solid $color_form;
+color: $color_form;
+ resize: none;
+ overflow: hidden;
+text-indent:10px;
+}
+.forms-call textarea.messege:focus::-webkit-input-placeholder
+{text-indent: -30%;
+  transition: text-indent 0.53s ease;
+
+}
+ #contact .forms-call {
+border: 0;
+outline: 0;
+border-radius: 0;
+text-align: center;
+
+    /* width: 100%; */
+}
+  #contact .forms-call input[type=submit]{
+width: 25%;
+display: inline-block;
+box-shadow: 1px 3px 3px 1px rgba(#000, 0.15);
+border-radius: 5px;
+border: 0;
+ }
+
+
+
+
+
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder          {color: transparent}
+:focus:-moz-placeholder           {color: transparent}
+:focus:-ms-input-placeholder      {color: transparent}
+
+
+/* :-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.3s ease;}
+:-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.3s ease;}
+:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.3s ease;}
+:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.3s ease;}
+:focus::-webkit-input-placeholder {text-indent: 110%; transition: text-indent 0.3s ease;}
+:focus::-moz-placeholder          {text-indent: 110%; transition: text-indent 0.3s ease;}
+:focus:-moz-placeholder           {text-indent: 110%; transition: text-indent 0.3s ease;}
+:focus:-ms-input-placeholder      {text-indent: 110%; transition: text-indent 0.3s ease;} */

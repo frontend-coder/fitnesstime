@@ -1,0 +1,103 @@
+@import '_var.scss';
+
+ .header_img {
+ background: #000 url('../images/slide1.jpg') center center no-repeat;
+min-height:581px;
+background-size: cover;
+}
+
+.top_line {
+background-color: $aksent_color;
+height: 100px;
+width: 100%;
+position: fixed;
+
+}
+
+.top_line_box {
+display: flex;
+height: 100px;
+align-items: center;
+justify-content: space-between;
+}
+
+
+.top_line_logo {
+  font-family: "RalewayExtraBold, sans-serif";
+  @include font-size(24px);
+  color: #fff;
+}
+
+.top_line_menu {
+  padding: 0;
+  margin: 0;
+}
+.top_line_menu ul li {
+  display: inline-block;
+}
+.top_line_menu ul li a {
+  display: block;
+color:#fff;
+padding: 10px 15px;
+font-family: "OswaldRegular", sans-serif;
+ @include font-size(14px);
+ line-height: 24px/14px;
+  @include trans;
+}
+
+.top_line_menu ul li a:hover {
+background-color:  $red-color;
+}
+
+.slider_content {
+display: flex;
+min-height: 581px - 100px;
+align-items: center;
+
+}
+.slider_content_box {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+    font-family: "OswaldBold", sans-serif;
+    text-transform: uppercase;
+}
+
+.slider_title {
+  @include font-size(12px);
+   line-height: 24/12;
+   padding: 12px 6px 12px 13px;
+   background-color: $red_dark_color;
+margin-bottom: 2px;
+}
+.slider_name {
+ @include font-size(30px);
+   padding: 20px 12px 20px 21px;
+   background-color: #353535;
+margin-bottom: 2px;
+}
+
+.slider_rest {
+  @include font-size(18px);
+  line-height: 24/18;
+ background-color: #353535;
+ padding: 14px 24px 14px 24px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.block_h {
+  height: 10000px;
+  background-color: blue;
+}

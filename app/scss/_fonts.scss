@@ -1,0 +1,47 @@
+@import '_var.scss';
+/* font-family: "OswaldBold"; */
+@font-face {
+	font-family: "OswaldBold";
+	src: url("../fonts/OswaldBold/Oswald-Bold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/OswaldBold/Oswald-Bold.woff") format("woff"),
+	url("../fonts/OswaldBold/Oswald-Bold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "OswaldRegular"; */
+@font-face {
+	font-family: "OswaldRegular";
+	src: url("../fonts/OswaldRegular/Oswald-Regular.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/OswaldRegular/Oswald-Regular.woff") format("woff"),
+	url("../fonts/OswaldRegular/Oswald-Regular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "OswaldRegular"; */
+@font-face {
+	font-family: "OpenSansLight";
+	src: url("../fonts/OpenSansLight/OpenSansLight.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/OpenSansLight/OpenSansLight.woff") format("woff"),
+	url("../fonts/OpenSansLight/OpenSansLight.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "OpenSansRegular"; */
+@font-face {
+	font-family: "OpenSansRegular";
+	src: url("../fonts/OpenSansRegular/OpenSansRegular.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"),
+	url("../fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* font-family: "RalewayExtraBold"; */
+@font-face {
+	font-family: "RalewayExtraBold";
+	src: url("../fonts/RalewayExtraBold/RalewayExtraBold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/RalewayExtraBold/RalewayExtraBold.woff") format("woff"),
+	url("../fonts/RalewayExtraBold/RalewayExtraBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
