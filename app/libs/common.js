@@ -43,7 +43,24 @@ navText:['<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>','<i clas
     margin:10
 });
 
-
+$('#carousel_trade').owlCarousel({
+    loop:true,
+    margin:30,
+    nav:true,
+    dots:false,
+    navText:['<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>','<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>'],
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1024:{
+            items:5
+        }
+    }
+})
 
 
 

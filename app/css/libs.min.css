@@ -4787,22 +4787,22 @@ img.mfp-img {
   margin-top: 10px;
  } */
 *::-webkit-input-placeholder {
-  color: #202020;
+  color: #fff;
   opacity: 1;
 }
 
 *:-moz-placeholder {
-  color: #202020;
+  color: #fff;
   opacity: 1;
 }
 
 *::-moz-placeholder {
-  color: #202020;
+  color: #fff;
   opacity: 1;
 }
 
 *:-ms-input-placeholder {
-  color: #202020;
+  color: #fff;
   opacity: 1;
 }
 
@@ -5600,49 +5600,128 @@ a.mPS2id-highlight,
   background: #e25050;
 }
 
-.price_fon_item {
-  background: #d14343;
-  color: #fff;
-  border: 1px solid transparent;
-  padding: 45px 60px 50px 60px;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+.price_bock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.price_fon_item:hover {
+.pbn_wrap {
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.pbn_wrap_center {
+  width: 40%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.price_bock_items {
+  background-color: #d24443;
+  width: 32%;
+  padding: 20px 5px 20px 0;
+  color: #fff;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid transparent;
+}
+
+.price_bock_wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.price_bock_items:hover {
   border: 1px solid #fff;
   background-color: transparent;
 }
 
-.price_title, .price_number {
+.price_bock_terms {
+  border-left: 1px solid #e25051;
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.price_bock_items:hover .price_bock_terms {
+  border-left: 1px solid #fff;
+}
+
+.price_bock_terms ul li {
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.price_bock_terms ul li:before {
+  position: absolute;
+  top: 4px;
+  left: -20px;
+  font-size: .8rem;
+  margin-right: 11px;
+  font-weight: 200;
+  content: '\f00c';
+  font-family: 'FontAwesome';
+}
+
+.price_title,
+.price_number {
   font-family: "OswaldBold", sans-serif;
   /*  // font-size: $size; */
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   text-transform: uppercase;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  word-wrap: normal;
 }
 
 .price_number {
   /*  // font-size: $size; */
-  font-size: 2.25rem;
+  font-size: 1.5rem;
 }
 
-.price_block {
-  /*  // font-size: $size; */
-  font-size: 0.875rem;
+.price_number:after {
+  content: "\20BD";
 }
 
-.price_block ul li {
-  margin-bottom: 24px;
-}
-
-.price_block ul li .fa {
-  margin-right: 11px;
-  font-weight: 200;
+.price_bock_items:hover .price_buton {
+  background: #d24443;
 }
 
 .price_buton {
+  margin: 20px auto;
   display: inline-block;
   padding: 14px 24px;
   background: #e25050;
@@ -5658,10 +5737,36 @@ a.mPS2id-highlight,
   cursor: pointer;
 }
 
-.price_fon_item:hover .price_buton,
+.price_fon_item:hover
+.price_buton,
 .price_buton:hover {
   background: #fff;
   color: #e25050;
+}
+
+.price_bock_items:hover .price_buton:hover {
+  background: #d24443;
+  color: #fff;
+}
+
+#carousel_trade picture img {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+#carousel_trade .owl-nav button.owl-next {
+  position: absolute;
+  top: 25%;
+  right: -10%;
+  background: transparent;
+}
+
+#carousel_trade .owl-nav button.owl-prev {
+  position: absolute;
+  background: transparent;
+  top: 25%;
+  left: -10%;
 }
 
 .social_block {
@@ -5746,7 +5851,7 @@ a.mPS2id-highlight,
 }
 
 .footer-fon {
-  background: #202020 url("../images/foter_fon_map.png") center center no-repeat;
+  background: url("../images/foter_fon_map.png") center center no-repeat;
   min-height: 420px;
   background-size: cover;
   position: relative;
@@ -5755,23 +5860,35 @@ a.mPS2id-highlight,
 .footer-fon:before {
   position: absolute;
   content: "";
-  background: rgba(32, 32, 32, 0.2);
+  background: #202020;
+  opacity: .9;
   width: 100%;
   height: 100%;
+  left: 0;
+  top: 0;
 }
 
 .footer_box {
   padding: 0;
   margin: 60px 0 100px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 2;
 }
 
 .footer_left {
-  float: left;
+  position: relative;
   width: 30%;
 }
 
 .footer_right {
-  float: left;
+  position: relative;
   width: 70%;
 }
 
@@ -5792,7 +5909,203 @@ a.mPS2id-highlight,
   color: #c6c6c6;
 }
 
-/* // @import '_vseforms.scss'; */
+/* p {
+  @include font-size(20px);
+ } */
+/* p {
+  @include trans;
+ } */
+/* // как использовать */
+/* p {
+  @include trans;
+ } */
+/* // как использовать */
+/* p {
+  @include font-size(20px);
+ } */
+/*
+как перевести размеры контейнеров из пикселей
+в rem */
+/* .divigin {
+  width: pxrem(30px);
+} */
+/* если ширина контейнеров в % а отступы в пикселях
+20 пикселей - один отступ
+ */
+/* .grid-item {
+  width: calc((100% - 20px * 2) / 3);
+}
+ */
+/* Для 3-колоночной сетки  удвление отсупов если много строк в сетке*/
+/* .grid-item:nth-child(3n+3) {
+  margin-right: 0;
+  float: right;
+} */
+/* как использовать
+.nameclass {
+ @include triangle(25px, up, red);
+  @include triangle(25px, down, red);
+   @include triangle(100px, left, red);
+    @include triangle(100px, right, red);
+}
+ */
+/* как использовать
+.nameclass {
+ @include trianglelong(25px,40px, up, red);
+ @include trianglelong(25px,40px, down, red);
+ @include trianglelong(25px,40px, left, red);
+ @include trianglelong(25px,40px, right, red);
+
+}
+ */
+/* как создать треугольник легкий способ */
+/* как использовать
+.nameclass {
+ @include trianglelight(25px, 25px, up, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, dawn, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, left, 50px, 50px, #0489B1);
+@include trianglelight(25px, 25px, right, 50px, 50px, #0489B1);
+
+ */
+/* как использовать
+.nameclass {
+ @include triangle_in_corner(25px, topleft, red);
+    @include triangle_in_corner(100px, topright, red);
+
+ @include triangle_in_corner(25px, bottomleft, red);
+  @include triangle_in_corner(25px, bottomright, red);
+
+}
+ */
+/*все переменные и моды */
+/*  width: $block_width - ( 5px * 2 ) - ( 1px * 2 ); */
+/* как сделать миксинг */
+/*  @mixin large-text {
+   font: {
+     family: Arial;
+     size: 20px;
+    weight: bold;
+   }
+  color: #ff0000;
+ } */
+/* как использовать миксинг */
+/*  .page-title {
+  @include large-text;
+  padding: 4px;
+  margin-top: 10px;
+ } */
+/* стили формы обратной связи */
+.contact_footer {
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  z-index: 3;
+  position: relative;
+}
+
+.contact_footer_input {
+  font-size: 1.1rem;
+  width: 31%;
+  height: 45px;
+  margin-bottom: 12px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  text-indent: 10px;
+  text-decoration: underline;
+  font-family: "OswaldRegular", sans-serif;
+  letter-spacing: 0.35rem;
+}
+
+.contact_footer_textarea {
+  font-size: 1.1rem;
+  color: #fff;
+  width: 65.5%;
+  resize: none;
+  background-color: transparent;
+  border: 1px solid white;
+  font-family: "OswaldRegular", sans-serif;
+  min-height: 110px;
+  padding-left: 10px;
+  letter-spacing: 0.35rem;
+}
+
+.footer_submit_contain {
+  width: 31%;
+}
+
+.contact_footer_submit {
+  width: 100%;
+  padding: 12px 0;
+  font-size: .9rem;
+  font-family: "OswaldBold", sans-serif;
+  background-color: #e14f4f;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.checkbox.custom {
+  margin-top: 20px 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.css-label-red {
+  background-image: url(../images/check2.png);
+}
+
+input[type=checkbox].css-checkbox {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0px;
+  border: 0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label-red {
+  padding-left: 30px;
+  height: 20px;
+  display: inline-block;
+  line-height: 20px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 14px;
+  vertical-align: middle;
+  cursor: pointer;
+  opacity: 1;
+  color: #fff;
+}
+
+input[type=checkbox].css-checkbox + label.css-label-red:hover {
+  /*   opacity: 0.5; */
+  /* 선택적 사용 */
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label-red {
+  background-position: 0 -20px;
+}
+
 /* p {
   @include font-size(20px);
  } */

@@ -1,18 +1,19 @@
 @import '_var.scss';
 *::-webkit-input-placeholder {
-color:$color_form;
+color:#fff;
+
 opacity: 1;
 }
 *:-moz-placeholder {
-color:$color_form;
+color:#fff;
 	opacity: 1;
 }
 *::-moz-placeholder {
-color:$color_form;
+color:#fff;
 	opacity: 1;
 }
 *:-ms-input-placeholder {
-color:$color_form;
+color:#fff;
 	opacity: 1;
 }
 *, *:before, *:after {
@@ -88,6 +89,6 @@ width: 100%;
 @import '_header.scss';
 @import '_allstyle.scss';
 
-/* // @import '_vseforms.scss'; */
+@import '_vseforms.scss';
 
 @import '_media.scss';

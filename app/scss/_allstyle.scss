@@ -267,46 +267,98 @@ justify-content: flex-start;
 
 .price_fon {
   background: #e25050;
-
 }
+.price_bock {
+  display: flex;
+  justify-content: space-between;
+}
+.pbn_wrap {
 
-.price_fon_item
-{
-  background: #d14343;
-  color: #fff;
+  padding-left: 10px;
+  padding-right:5px;
+}
+.pbn_wrap_center {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+.price_bock_name {
+//width: 40%;
+}
+.price_bock_items {
+  background-color: #d24443;
+  width: 32%;
+  padding: 20px 5px 20px 0;
+  color:#fff;
+  @include transition(all, 0.5s, ease);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   border: 1px solid transparent;
-  padding: 45px 60px 50px 60px;
-  @include trans;
-
 }
-.price_fon_item:hover {
+.price_bock_wrap {
+  display: flex;
+//  margin: auto;
+flex-grow: 1;
+}
+
+.price_bock_items:hover {
   border: 1px solid #fff;
   background-color: transparent;
 }
-.price_title, .price_number {
-  font-family: "OswaldBold", sans-serif;
-  @include font-size(18px);
-  text-transform: uppercase;
-  margin-bottom: 50px;
+.price_bock_terms {
+  border-left:1px solid #e25051;
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @include transition(all, 0.5s, ease);
+}
 
+.price_bock_items:hover .price_bock_terms {
+  border-left:1px solid #fff;
 }
-.price_number {
- @include font-size(36px);
-}
-.price_block {
-  @include font-size(14px);
 
+
+
+
+
+.price_bock_terms ul li {
+ margin-bottom: 5px;
+ position: relative;
 }
-.price_block ul li {
- margin-bottom: 24px;
-}
-.price_block ul li .fa {
+.price_bock_terms ul li:before {
+  position: absolute;
+  top:4px;
+  left:-20px;
+  font-size: .8rem;
   margin-right: 11px;
   font-weight: 200;
+  content:'\f00c';
+  font-family: 'FontAwesome';
+}
+
+.price_title,
+.price_number {
+  font-family: "OswaldBold", sans-serif;
+  @include font-size(20px);
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  word-wrap: normal;
+}
+.price_number {
+  @include font-size(24px);
+}
+.price_number:after {
+ content:"\20BD";
 }
 
 
+.price_bock_items:hover .price_buton  {
+  background: #d24443;
+}
+
 .price_buton {
+  margin: 20px auto;
   display: inline-block;
   padding: 14px 24px;
   background: #e25050;
@@ -318,11 +370,48 @@ justify-content: flex-start;
   @include trans;
   cursor: pointer;
 }
-.price_fon_item:hover .price_buton,
+.price_fon_item:hover
+.price_buton,
 .price_buton:hover {
   background: #fff;
   color: $red-color;
 }
+.price_bock_items:hover .price_buton:hover  {
+  background: #d24443;
+  color:#fff;
+}
+
+#carousel_trade picture img {
+display: inline-block;
+width: 100%;
+height: auto;
+}
+
+#carousel_trade .owl-nav button.owl-next {
+position: absolute;
+top:25%;
+right:-10%;
+    background: transparent;
+}
+#carousel_trade .owl-nav button.owl-prev {
+position: absolute;
+    background: transparent;
+top:25%;
+
+left:-10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .social_block {
@@ -382,41 +471,42 @@ justify-content: flex-start;
 }
 
 .footer-fon {
- background: $color_form url('../images/foter_fon_map.png') center center no-repeat;
+ background: url('../images/foter_fon_map.png') center center no-repeat;
  min-height:420px;
  background-size: cover;
  position: relative;
-
 }
+
 .footer-fon:before {
-  position: absolute;
+ position: absolute;
   content: "";
-  background: rgba($color_form, 0.2);
+  background: #202020;
+  opacity: .9;
   width: 100%;
   height: 100%;
+  left:0;
+  top:0;
+
 }
-
-
-
-
 
 .footer_box {
   padding: 0;
   margin: 60px 0 100px 0;
-
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
 }
 
 .footer_left {
-  float: left;
+  position: relative;
   width: 30%;
 }
 
 .footer_right {
-  float: left;
+  position: relative;
   width: 70%;
-
-
 }
+
 .footer_title {
   font-family: "OswaldBold", sans-serif;
   @include font-size(14px);
