@@ -25,26 +25,22 @@ text-align: center;
  margin-bottom: 45px;
 }
 
-
 /*  3 тумб преимуществ в ряд */
-ul.tambl_row-three {
+.tambl_row-three {
   margin: 0;
-  margin-bottom: -1%;
-  margin-left: -1%;
   padding: 0;
-  list-style-type: none;
-   }
+}
 
 .tambl_item-three {
   float: left;
-  width: 32.33333%;
+  width: 32.333%;
   margin-bottom: 1%;
   margin-left: 1%;
   padding: 10px 5px;
   text-align: center; }
-.tambl_item-h {
-margin-bottom: 60px;
-}
+// .tambl_item-h {
+// margin-bottom: 60px;
+// }
 
 
 .tambl-title {

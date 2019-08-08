@@ -1,7 +1,6 @@
 $(document).ready(function() {
-	$("body").niceScroll({
-horizrailenabled:false
-});
+
+
 // вверхнее красиво-вращающееся меню
 // 1 и 2 строка это анимация крестика
 //3 строка - слайдер вниз меню
@@ -15,26 +14,44 @@ $('.hidden-mnu').hide("slow");
 $(".toggle-mnu").removeClass("on");
 });
 
-// pagination on lending pages
-$(".top_line_menu ul li a, .hidden_mnu ul li a").mPageScroll2id({
-layout                 : "auto",
-offset                 : ".top_line_box",
-scrollEasing           : "linear",
-highlightByNextTarget  : true,
-keepHighlightUntilNext : true,
-autoScrollSpeed        : true,
-scrollSpeed            : 1000
+    /* Page Scroll to id fn call */
+    $(".top_line_menu ul li a").mPageScroll2id({
+        layout: "auto",
+        offset: ".top_line",
+        autoScrollSpeed: true,
+        scrollSpeed: 1000,
+        highlightSelector: ".top_line_menu ul li a"
+    });
+
+    /* demo functions */
+    $("a[rel='next']").click(function(e) {
+        e.preventDefault();
+        var to = $(this).parent().parent("section").next().attr("id");
+        $.mPageScroll2id("scrollTo", to);
+    });
+
+
+
+$('#carousel_header').owlCarousel({
+    items:1,
+    autoplay:true,
+autoplayTimeout:4000,
+nav:true,
+navText:['<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>','<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>'],
+    lazyLoad:true,
+    loop:true,
+    margin:10
 });
 
 
-  $('#verticalTab').jqTabs();
 
-// всплывающие окна обратной связи позвонить мне
-$("a[href='#call-back']").magnificPopup ({
-  mainClass:'mfp-fade',
-  removalDelay:400,
-  type:'inline',
-});
+
+
+
+
+
+
+
 
 
 /*чтобы в формах был индивидуальный заголовок */
