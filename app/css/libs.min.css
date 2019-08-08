@@ -5465,7 +5465,7 @@ a.mPS2id-highlight,
 }
 
 /*  4 тумб преимуществ в ряд */
-ul.tambl_row-four {
+.tambl_row-four {
   margin: 0;
   margin-bottom: -2%;
   margin-left: -2%;
@@ -5498,8 +5498,8 @@ ul.tambl_row-four {
 }
 
 .trainer_item_text {
-  height: 70px;
   margin: 0;
+  text-align: left;
   background-color: #fff;
   text-transform: uppercase;
   display: -webkit-box;
@@ -5518,6 +5518,8 @@ ul.tambl_row-four {
 
 .trainer_item_box {
   padding-left: 18px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .trainer_item_name {
@@ -5526,15 +5528,34 @@ ul.tambl_row-four {
   line-height: 1.71429;
   font-family: "OswaldBold", sans-serif;
   color: #202020;
-  margin-bottom: 9px;
+  margin-bottom: 5px;
 }
 
 .trainer_item_prof {
   color: #afafaf;
-  text-align: left;
   /*  // font-size: $size; */
   font-size: 0.75rem;
   font-family: "OswaldRegular", sans-serif;
+  margin-bottom: 10px;
+}
+
+.social_trenier {
+  list-style-type: none;
+}
+
+.social_trenier li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.social_trenier li a {
+  /*  // font-size: $size; */
+  font-size: 0.875rem;
+  color: #afafaf;
+}
+
+.social_trenier li a:hover {
+  color: #969696;
 }
 
 .galary .tambl_item-four .trainer_item_box {
@@ -5543,6 +5564,35 @@ ul.tambl_row-four {
 
 .galary .tambl_item-four .trainer_item_box .trainer_item_name {
   text-align: left;
+}
+
+.gallery_box {
+  display: grid;
+  grid-gap: 0.75rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+  grid-auto-flow: dense;
+  padding: 0;
+}
+
+.gallery_box_items:nth-child(1) {
+  grid-column: 1/span 2;
+  grid-row: span 2;
+}
+
+.gallery_box_items:nth-child(7) {
+  grid-column: 2/span 2;
+  grid-row: span 2;
+}
+
+.gallery_box_items:nth-child(12) {
+  grid-column: 3/span 2;
+  grid-row: span 2;
+}
+
+.gallery_box_items:nth-child(15) {
+  grid-column: 1/span 2;
+  grid-row: span 2;
 }
 
 /* оформление цен */
