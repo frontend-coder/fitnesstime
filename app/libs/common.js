@@ -1,5 +1,26 @@
 $(document).ready(function() {
-
+    //email mask
+    // $('#emailid').inputmask({
+    //     mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+    //     greedy: false,
+    //     clearMaskOnLostFocus: false,
+    //     onBeforeWrite: function (event, buffer, caretPos, opts) {
+    //         buffer.forEach(function (item, i, buffer) {
+    //             if (item == '@') {
+    //                 buffer[i + 1] = 'g';
+    //                 buffer[i + 2] = 'm';
+    //                 buffer[i + 3] = 'a';
+    //                 buffer[i + 4] = 'i';
+    //                 buffer[i + 5] = 'l';
+    //                 buffer[i + 6] = '.';
+    //                 buffer[i + 7] = 'c';
+    //                 buffer[i + 8] = 'o';
+    //                 buffer[i + 9] = 'm';
+    //                 buffer.length = i + 10;
+    //             }
+    //         });
+    //     }
+    // });
 
 // вверхнее красиво-вращающееся меню
 // 1 и 2 строка это анимация крестика
@@ -43,69 +64,67 @@ navText:['<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>','<i clas
     margin:10
 });
 
-$('#carousel_trade').owlCarousel({
-    loop:true,
-    margin:30,
-    nav:true,
-    dots:false,
-    navText:['<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>','<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>'],
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1024:{
-            items:5
+    $('#carousel_trade').owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: true,
+        dots: false,
+        navText: ['<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>', '<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>'],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1024: {
+                items: 5
+            }
         }
-    }
-})
+    });
 
-
-
-
-
-
-
-
-
-
-/*чтобы в формах был индивидуальный заголовок */
-$("a[href='#call-back']").click(function(){
-  var dataForm = $(this).data("form");
-  var dataText = $(this).data("text");
-  $(".forms-call h4").text(dataText);
-  $(".forms-call [name=admin-data]").val(dataForm);
+// всплывающие окна обратной связи позвонить мне
+$("a[href='#call-back']").magnificPopup ({
+  mainClass    : 'mfp-fade',
+  removalDelay : 400,
+    type: 'inline',
+    tClose: 'Закрыть (ESC)',
+    fixedContentPos: false,
+    fixedBgPos: true,
 });
 
-
-
-
-
-
-
-
-
+    
+/*чтобы в формах был индивидуальный заголовок */
+    $("a[href='#call-back']").click(function () {
+    ///    $('.lp').toggleClass("fix");
+  const dataForm = $(this).data("form");
+  const dataText = $(this).data("text");
+  const dataSub = $(this).data("sub");
+  $(".forms-calldecor h4").text(dataText);
+  $(".forms-call [name=admin-data]").val(dataForm);
+    $("form").attr('onsubmit', dataSub);
+});
+// onsubmit="yaCounterXXXXX.reachGoal('raschetSmetyHeader'); return true;"
+    
 //Ajax push mesege http://api.jquery.com/jquery.ajax/
 
-$("form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			$(".forms-calldecor .success").addClass("active");
-			setTimeout(function() {
-				// Done Functions
-				$(".forms-calldecor .success").removeClass("active");
-				th.trigger("reset");
-				$.magnificPopup.close();
-			}, 3000);
-		});
-		return false;
-	});
+    $("form").submit(function () { //Change
+        var th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "mail.php", //Change
+            data: th.serialize()
+        }).done(function () {
+            $(".forms-calldecor .success").addClass("active");
+            setTimeout(function () {
+                // Done Functions
+                $(".forms-calldecor .success").removeClass("active");
+                th.trigger("reset");
+                $.magnificPopup.close();
+            }, 3000);
+        });
+        return false;
+    });
 //castom code
 
 

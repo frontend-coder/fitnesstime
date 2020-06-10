@@ -51,14 +51,14 @@ gulp.task('styles', () => {
 
 gulp.task('scripts', done => {
 	var jsFiles = [
-'app/libs/plagins/jquery/jquery.min.js',
-'app/libs/plagins/magnific-popup/jquery.magnific-popup.min.js',
-'app/libs/plagins/jquery.PageScroll2id/jquery.PageScroll2id.min.js',
-'app/libs/plagins/magnific-popup/jquery.magnific-popup.min.js',
-'app/libs/plagins/OwlCarousel2-2.3.4/dist/owl.carousel.min.js',
-'app/libs/common.js'
-// Always at the end
-];
+    'app/libs/plagins/jquery/jquery.min.js',
+    'app/libs/plagins/jquery/page-scroll-to-id-master/js/minified/jquery.malihu.PageScroll2id.min.js',
+    'app/libs/plagins/jquery/magnific-popup/jquery.magnific-popup.js',
+		'app/libs/plagins/jquery/OwlCarousel2-2.3.4/dist/owl.carousel.min.js',
+		    'app/libs/plagins/mask/inputmask.min.js',
+    'app/libs/common.js',
+    // Always at the end
+  ];
 return gulp.src(jsFiles)
 .pipe(concat('scripts.min.js'))
 //	.pipe(uglify()) // Mifify js (opt.)
@@ -135,16 +135,24 @@ function moveimages() {
 	.pipe(gulp.dest('dist/images'))
 	.pipe(filesize()).on('error', gulpUtil.log);
 }
-
+function movefonts() {
+	return gulp.src('app/fonts/**/*.{otf,eot,svg,ttf,woff,woff2}')
+		.pipe(gulp.dest('dist/fonts'))
+		.pipe(filesize()).on('error', gulpUtil.log);
+}
 // gulp.task('compressimg', gulp.series(compressimg));
 gulp.task('cleanbuild', cleaner);
 gulp.task('movefile', movefile);
+
+gulp.task('movefonts', movefonts);
+
 gulp.task('movefilother', movefilother);
 gulp.task('movejs', movejs);
 gulp.task('movecss', movecss);
 gulp.task('moveimages', gulp.series(moveimages));
 
-gulp.task('build', gulp.series('cleanbuild', gulp.parallel('movefile', 'movefilother', 'movejs', 'movecss', 'moveimages' )));
+gulp.task('build', gulp.series('cleanbuild', gulp.parallel('movefonts',
+	'movefile', 'movefilother', 'movejs', 'movecss', 'moveimages')));
 
 // FTP: ftp://vh146.timeweb.ru
 // Логин: cc63120

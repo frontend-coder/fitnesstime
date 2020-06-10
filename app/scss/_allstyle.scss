@@ -2,22 +2,26 @@
 
 /* оформление содержимого над самой нартикой ниже top line */
 .block {
-	padding: 60px 0;
+  padding: 60px 0;
 }
+
 .block_title {
-	text-align: center;
+  text-align: center;
 }
+
 .block_title h2 {
-	font-family: "OswaldBold", sans-serif;
- @include font-size(30px);
- color: $aksent_color;
- text-transform: uppercase;
- margin-bottom: 18px;
+  font-family: "OswaldBold", sans-serif;
+  @include font-size(30px);
+  color: $aksent_color;
+  text-transform: uppercase;
+  margin-bottom: 18px;
 
 }
+
 .block_title h2 span {
   color: $red-color;
 }
+
 .block_descr {
   color: $bacis_color_font;
   text-align: center;
@@ -37,91 +41,97 @@
   margin-bottom: 1%;
   margin-left: 1%;
   padding: 10px 5px;
-  text-align: center; }
-// .tambl_item-h {
-// margin-bottom: 60px;
-// }
-
+  text-align: center;
+}
 
 .tambl-title {
   text-transform: uppercase;
   color: $aksent_color;
-  font-family: "OswaldBold", sans-serif;;
+  font-family: "OswaldBold", sans-serif;
+  ;
   @include font-size(18px);
   margin: 10px 0 30px 0;
 }
 
 .title-text p {
- @include font-size(13px);
- color: $bacis_color_font;
- margin-bottom: 30px;
+  @include font-size(13px);
+  color: $bacis_color_font;
+  margin-bottom: 30px;
 }
+
 .title-text p:last-child {
   margin-bottom: 0;
 }
 
-
 .icon {
-	background: url(../images/sprite.png) no-repeat;
-	display: inline-block;
+  background: url(../images/sprite.png) no-repeat;
+  display: inline-block;
 }
-.icon-barket  {
+
+.icon-barket {
   background-position: 0px -162px;
-  width: 74px ;
+  width: 74px;
   height: 93px;
 }
-.icon-document  {
+
+.icon-document {
   background-position: 0px -375px;
-  width: 74px ;
+  width: 74px;
   height: 93px;
 }
-.icon-finger_up  {
+
+.icon-finger_up {
   background-position: 0px -588px;
-  width: 74px ;
+  width: 74px;
   height: 93px;
 }
-.icon-flug  {
+
+.icon-flug {
   background-position: 0px -801px;
-  width: 74px ;
+  width: 74px;
   height: 93px;
 }
-.icon-heart  {
+
+.icon-heart {
   background-position: 0px -1014px;
-  width: 74px ;
+  width: 74px;
   height: 93px;
 }
-.icon-magnify  {
+
+.icon-magnify {
   background-position: 0px 0px;
-  width: 42px ;
+  width: 42px;
   height: 42px;
 }
-.icon-medicin  {
+
+.icon-medicin {
   background-position: 0px -1227px;
-  width: 74px ;
+  width: 74px;
   height: 93px;
 }
-
 
 /* // блок с тренерами */
 
 .trainer_fon {
- background: #000 url('../images/fon_trainers.jpg') center center no-repeat;
- min-height:581px;
- background-size: cover;
+  background: #000 url('../images/fon_trainers.jpg') center center no-repeat;
+  min-height: 581px;
+  background-size: cover;
 }
+
 .trainer_fon .block_title h2,
 .galary .block_title h2,
-.price_fon .block_title h2
-{
+.price_fon .block_title h2 {
   color: #fff;
   position: relative;
   text-align: center;
   margin-bottom: 65px;
 }
-.galary .block_title h2{
+
+.galary .block_title h2 {
   color: $aksent_color;
   margin-bottom: 35px;
 }
+
 .trainer_fon .block_title h2:before,
 .price_fon .block_title h2:before,
 .galary .block_title h2:before {
@@ -130,22 +140,19 @@
   width: 45px;
   height: 1px;
   background-color: #fff;
-  left:50%;
+  left: 50%;
   bottom: -8px;
   margin-left: -22px;
   text-align: center;
 }
+
 .galary .block_title h2:before {
   background-color: $aksent_color;
 }
 
-.galary .block_descr
-{
+.galary .block_descr {
   margin-bottom: 70px;
-
 }
-
-
 
 /*  4 тумб преимуществ в ряд */
 .tambl_row-four {
@@ -165,32 +172,32 @@
   text-align: center;
   background-color: #fff;
 }
+
 .tambl_item-four:hover {
- background-color: #fff;
-
+  background-color: #fff;
 }
-
-
-
 
 .trainer_item {
   padding: 0;
   margin: 0;
 }
+
 .trainer_item img {
   width: 100%;
   height: auto;
 }
+
 .trainer_item_text {
-// height: 70px;
-margin: 0;
-text-align: left;
-background-color: #fff;
-text-transform: uppercase;
-display: flex;
-align-items: center;
-justify-content: flex-start;
+  // height: 70px;
+  margin: 0;
+  text-align: left;
+  background-color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
+
 .trainer_item_box {
   padding-left: 18px;
   padding-top: 5px;
@@ -200,10 +207,11 @@ justify-content: flex-start;
 .trainer_item_name {
   @include font-size(14px);
   line-height: (24px/14px);
-  font-family: "OswaldBold", sans-serif ;
+  font-family: "OswaldBold", sans-serif;
   color: $color_form;
   margin-bottom: 5px;
 }
+
 .trainer_item_prof {
   color: #afafaf;
   @include font-size(12px);
@@ -214,14 +222,17 @@ justify-content: flex-start;
 .social_trenier {
   list-style-type: none;
 }
+
 .social_trenier li {
   display: inline-block;
   margin-right: 5px;
 }
+
 .social_trenier li a {
   @include font-size(14px);
   color: #afafaf;
 }
+
 .social_trenier li a:hover {
   color: darken(#afafaf, 10%);
 }
@@ -229,6 +240,7 @@ justify-content: flex-start;
 .galary .tambl_item-four .trainer_item_box {
   padding-left: 0;
 }
+
 .galary .tambl_item-four .trainer_item_box .trainer_item_name {
   text-align: left;
 }
@@ -241,73 +253,80 @@ justify-content: flex-start;
   grid-auto-flow: dense;
   padding: 0;
 }
+
 .gallery_box_items:nth-child(1) {
   grid-column: 1/span 2;
   grid-row: span 2;
 }
+
 .gallery_box_items:nth-child(7) {
   grid-column: 2/span 2;
   grid-row: span 2;
 }
+
 .gallery_box_items:nth-child(12) {
   grid-column: 3/span 2;
   grid-row: span 2;
-    //border:1px solid red;
+}
 
-  }
-  .gallery_box_items:nth-child(14) {
+// .gallery_box_items:nth-child(14) {}
 
-  }
-  .gallery_box_items:nth-child(15) {
-    grid-column: 1/span 2;
-    grid-row: span 2;
-  }
+.gallery_box_items:nth-child(15) {
+  grid-column: 1/span 2;
+  grid-row: span 2;
+}
 
 /* оформление цен */
 
 .price_fon {
   background: #e25050;
 }
+
 .price_bock {
   display: flex;
   justify-content: space-between;
 }
-.pbn_wrap {
 
+.pbn_wrap {
   padding-left: 10px;
-  padding-right:5px;
+  padding-right: 5px;
 }
+
 .pbn_wrap_center {
   width: 40%;
   display: flex;
   align-items: center;
 }
-.price_bock_name {
-//width: 40%;
-}
+
+// .price_bock_name {
+//   //width: 40%;
+// }
+
 .price_bock_items {
   background-color: #d24443;
   width: 32%;
   padding: 20px 5px 20px 0;
-  color:#fff;
+  color: #fff;
   @include transition(all, 0.5s, ease);
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   border: 1px solid transparent;
 }
+
 .price_bock_wrap {
   display: flex;
-//  margin: auto;
-flex-grow: 1;
+  //  margin: auto;
+  flex-grow: 1;
 }
 
 .price_bock_items:hover {
   border: 1px solid #fff;
   background-color: transparent;
 }
+
 .price_bock_terms {
-  border-left:1px solid #e25051;
+  border-left: 1px solid #e25051;
   padding-left: 25px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -315,25 +334,22 @@ flex-grow: 1;
 }
 
 .price_bock_items:hover .price_bock_terms {
-  border-left:1px solid #fff;
+  border-left: 1px solid #fff;
 }
-
-
-
-
 
 .price_bock_terms ul li {
- margin-bottom: 5px;
- position: relative;
+  margin-bottom: 5px;
+  position: relative;
 }
+
 .price_bock_terms ul li:before {
   position: absolute;
-  top:4px;
-  left:-20px;
+  top: 4px;
+  left: -20px;
   font-size: .8rem;
   margin-right: 11px;
   font-weight: 200;
-  content:'\f00c';
+  content: '\f00c';
   font-family: 'FontAwesome';
 }
 
@@ -345,15 +361,17 @@ flex-grow: 1;
   margin-bottom: 30px;
   word-wrap: normal;
 }
+
 .price_number {
   @include font-size(24px);
 }
+
 .price_number:after {
- content:"\20BD";
+  content: "\20BD";
 }
 
 
-.price_bock_items:hover .price_buton  {
+.price_bock_items:hover .price_buton {
   background: #d24443;
 }
 
@@ -370,53 +388,42 @@ flex-grow: 1;
   @include trans;
   cursor: pointer;
 }
-.price_fon_item:hover
-.price_buton,
+
+.price_fon_item:hover .price_buton,
 .price_buton:hover {
   background: #fff;
   color: $red-color;
 }
-.price_bock_items:hover .price_buton:hover  {
+
+.price_bock_items:hover .price_buton:hover {
   background: #d24443;
-  color:#fff;
+  color: #fff;
 }
 
 #carousel_trade picture img {
-display: inline-block;
-width: 100%;
-height: auto;
+  display: inline-block;
+  width: 100%;
+  height: auto;
 }
 
 #carousel_trade .owl-nav button.owl-next {
-position: absolute;
-top:25%;
-right:-10%;
-    background: transparent;
+  position: absolute;
+  top: 25%;
+  right: -10%;
+  background: transparent;
 }
+
 #carousel_trade .owl-nav button.owl-prev {
-position: absolute;
-    background: transparent;
-top:25%;
-
-left:-10%;
+  position: absolute;
+  background: transparent;
+  top: 25%;
+  left: -10%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .social_block {
   background-color: $color_form;
 }
+
 .social_box {
   padding: 30px 0;
   border-bottom: 1px solid #323232;
@@ -425,10 +432,10 @@ left:-10%;
   justify-content: space-between;
 }
 
-
 .social_links {
   padding: 0;
 }
+
 .social_links ul li {
   display: inline-block;
 }
@@ -439,16 +446,16 @@ left:-10%;
   color: #fff;
   @include trans;
 }
+
 .social_links ul li a:hover {
   color: $red-color;
-
 }
+
 .twitter_block {
   align-items: flex-start;
   display: flex;
   justify-content: flex-start;
 }
-
 
 .twitter_block_icon {
   -ms-align-self: center;
@@ -457,6 +464,7 @@ left:-10%;
   height: 20px;
   color: #fff;
 }
+
 .twitter_block_text {
   width: 570px;
   padding-left: 10px;
@@ -465,28 +473,26 @@ left:-10%;
   font-family: "OpenSansLight", sans-serif;
 }
 
-.twitter_block_text span
-{
-  color:#717171;
+.twitter_block_text span {
+  color: #717171;
 }
 
 .footer-fon {
- background: url('../images/foter_fon_map.png') center center no-repeat;
- min-height:420px;
- background-size: cover;
- position: relative;
+  background: url('../images/foter_fon_map.png') center center no-repeat;
+  min-height: 420px;
+  background-size: cover;
+  position: relative;
 }
 
 .footer-fon:before {
- position: absolute;
+  position: absolute;
   content: "";
   background: #202020;
   opacity: .9;
   width: 100%;
   height: 100%;
-  left:0;
-  top:0;
-
+  left: 0;
+  top: 0;
 }
 
 .footer_box {
@@ -500,6 +506,7 @@ left:-10%;
 .footer_left {
   position: relative;
   width: 30%;
+  padding-right: 15px;
 }
 
 .footer_right {
@@ -514,6 +521,7 @@ left:-10%;
   text-transform: uppercase;
   margin-bottom: 25px;
 }
+
 .footer_text {
   font-family: "OpenSansLight", sans-serif;
   @include font-size(12px);

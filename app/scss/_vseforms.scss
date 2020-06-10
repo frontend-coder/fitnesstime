@@ -6,68 +6,80 @@
   display: flex;
   justify-content: flex-start;
   justify-content: space-between;
-flex-wrap: wrap;
-z-index: 3;
-position: relative;
+  flex-wrap: wrap;
+  z-index: 3;
+  position: relative;
 }
 
 .contact_footer_input {
   font-size: 1.1rem;
-width: 31%;
-height: 45px;
-margin-bottom: 12px;
-border:none;
-background-color: transparent;
-color:#fff;
-border:1px solid #fff;
-text-indent: 10px;
-text-decoration: underline;
-    font-family: "OswaldRegular", sans-serif;
-letter-spacing: 0.35rem;
-
-}
-.contact_footer_textarea {
-    font-size: 1.1rem;
- color:#fff;
-  width: 65.5%;
-  resize:none;
+  width: 31%;
+  height: 45px;
+  margin-bottom: 12px;
+  border: none;
   background-color: transparent;
-border:1px solid lighten(#fff, 10%);
-    font-family: "OswaldRegular", sans-serif;
-min-height: 110px;
-padding-left: 10px;
-letter-spacing: 0.35rem;
+  color: #fff;
+  border: 1px solid #fff;
+  text-indent: 10px;
+  text-decoration: underline;
+  font-family: "OswaldRegular", sans-serif;
+  letter-spacing: 0.35rem;
+  @include trans;
 
 }
+
+.contact_footer_textarea:hover,
+.contact_footer_input:hover {
+  text-decoration: none;
+}
+
+.contact_footer_textarea {
+  padding-top: 5px;
+  font-size: 1.1rem;
+  color: #fff;
+  width: 65.5%;
+  resize: none;
+  background-color: transparent;
+  border: 1px solid lighten(#fff, 10%);
+  font-family: "OswaldRegular", sans-serif;
+  min-height: 110px;
+  padding-left: 10px;
+  letter-spacing: 0.35rem;
+  @include trans;
+  text-decoration: underline;
+}
+
 .footer_submit_contain {
-   width: 31%;
+  width: 31%;
 }
+
 .contact_footer_submit {
-width: 100%;
-padding: 12px 0;
-font-size: .9rem;
-font-family: "OswaldBold", sans-serif;
-background-color: #e14f4f;
-border:none;
-text-transform: uppercase;
-color:#fff;
-margin-bottom: 10px;
+  width: 100%;
+  padding: 12px 0;
+  font-size: .9rem;
+  font-family: "OswaldBold", sans-serif;
+  background-color: #e14f4f;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
-
-
 
 .checkbox.custom {
-margin-top: 20px 0;
+  margin: 20px 0;
   padding: 0;
   display: block;
   width: 100%;
-  margin-bottom: 20px;
 }
+
+.forms-calldecor .checkbox.custom {
+  margin: 20px;
+}
+
 .css-label-red {
   background-image: url(../images/check2.png);
 }
-
-
 
 input[type=checkbox].css-checkbox {
   position: absolute;
@@ -91,19 +103,158 @@ input[type=checkbox].css-checkbox+label.css-label-red {
   vertical-align: middle;
   cursor: pointer;
   opacity: 1;
-  color:#fff;
+  color: #fff;
 }
 
 input[type=checkbox].css-checkbox+label.css-label-red:hover {
-/*   opacity: 0.5; */ /* 선택적 사용 */
+  /*   opacity: 0.5; */
 }
 
 input[type=checkbox].css-checkbox:checked+label.css-label-red {
   background-position: 0 -20px;
 }
 
+/* конец формы обратной связи */
+/*оформление всплывающей формы а ниже и благодарности */
+.forms-calldecor {
+  position: relative;
+  overflow: hidden;
+  max-width: 480px;
+  margin: auto;
+  padding: 40px 10px;
+  transition: all .5s ease .1s;
+  border: 1px solid #fff;
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+  background-color: rgba(#e25050, 0.5);
+}
 
+.forms-calldecor h4,
+.forms-calldecor h5 {
+  font-size: 1.3rem;
+  margin: 10px 20px 0;
+  text-align: center;
+  color: #fff;
+}
 
+.forms-calldecor h5 {
+  font-size: .96rem;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
 
+.forms-calldecor input {
+  display: block;
+  font-size: 1.0rem;
+  text-indent: 20px;
+  width: 90%;
+  padding: 5px 0;
+  margin: 0 auto 10px;
+  border: 0;
+}
 
+.forms-calldecor .button-call {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
 
+.forms-calldecor .button-call .get-buttons {
+  margin-top: 20px;
+  width: 90%;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 12px 0 10px 0;
+  font-size: 1.0rem;
+  text-transform: uppercase;
+  line-height: 1;
+  transition: all .5s ease .1s;
+  cursor: pointer;
+}
+
+.forms-calldecor .button-call .get-buttons:hover {
+  color: #fff;
+  background-color: #d24443;
+  border: 1px solid #d24443;
+}
+
+.forms-calldecor .mfp-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #fff;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.forms-calldecor .success {
+  position: absolute;
+  z-index: 1;
+  top: -100%;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  transition: all .5s ease .1s;
+  opacity: 0;
+  background-color: #d24443;
+}
+
+.forms-calldecor .success.active {
+  top: 0;
+  opacity: 1;
+}
+
+.forms-calldecor .success .success-content {
+  margin: auto;
+}
+
+.forms-calldecor .success .success-content p {
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.forms-calldecor .success .success-content p:first-child {
+  margin-bottom: 20px;
+}
+
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  transition: all .615s ease-out;
+  opacity: 0;
+}
+
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: .8;
+}
+
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+}
+
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  transition: all .615s ease-out;
+  transform: translateY(1%);
+  opacity: 1;
+}
+
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  transform: translateY(-120%);
+  opacity: 0;
+}
