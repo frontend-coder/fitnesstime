@@ -1,26 +1,5 @@
 $(document).ready(function() {
-    //email mask
-    // $('#emailid').inputmask({
-    //     mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
-    //     greedy: false,
-    //     clearMaskOnLostFocus: false,
-    //     onBeforeWrite: function (event, buffer, caretPos, opts) {
-    //         buffer.forEach(function (item, i, buffer) {
-    //             if (item == '@') {
-    //                 buffer[i + 1] = 'g';
-    //                 buffer[i + 2] = 'm';
-    //                 buffer[i + 3] = 'a';
-    //                 buffer[i + 4] = 'i';
-    //                 buffer[i + 5] = 'l';
-    //                 buffer[i + 6] = '.';
-    //                 buffer[i + 7] = 'c';
-    //                 buffer[i + 8] = 'o';
-    //                 buffer[i + 9] = 'm';
-    //                 buffer.length = i + 10;
-    //             }
-    //         });
-    //     }
-    // });
+
 
 // вверхнее красиво-вращающееся меню
 // 1 и 2 строка это анимация крестика
@@ -55,10 +34,10 @@ $(".toggle-mnu").removeClass("on");
 
 $('#carousel_header').owlCarousel({
     items:1,
-    autoplay:true,
+  //  autoplay:true,
 autoplayTimeout:4000,
 nav:true,
-navText:['<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>','<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>'],
+    navText: ['<div class="slider_fon_icon"><i class="fa fa-angle-left"></i></div>','<div class="slider_fon_icon"><i class="fa fa-angle-right"></i></div>'],
     lazyLoad:true,
     loop:true,
     margin:10
