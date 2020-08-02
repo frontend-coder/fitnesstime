@@ -33,16 +33,20 @@
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
 .tambl_item-three {
   width: 32.333%;
   margin-bottom: 1%;
-  margin-left: 1%;
+  margin-right: 1%;
   padding: 10px 5px;
   text-align: center;
+}
+
+.tambl_item-three:nth-child(3n + 3) {
+  margin-right: 0;
 }
 
 .tambl-title {
@@ -157,26 +161,78 @@
 /*  4 тумб преимуществ в ряд */
 .tambl_row-four {
   margin: 0;
-  margin-bottom: -2%;
-  margin-left: -2%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   padding: 0;
-  list-style-type: none;
 }
 
 .tambl_item-four {
-  float: left;
   width: 23%;
   margin-bottom: 2%;
-  margin-left: 2%;
+  margin-right: 2%;
   padding: 0;
   text-align: center;
   background-color: #fff;
+  @include trans;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.tambl_item-four:hover .trainer_item_text {
+  height: 100%;
+}
+
+.tambl_item-four:nth-child(4n + 4) {
+  margin-right: 0;
 }
 
 .tambl_item-four:hover {
   background-color: #fff;
 }
 
+.trainer_item_text {
+  padding-left: 18px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+  margin: 0;
+  text-align: left;
+  background-color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  transition: all 0.8s ease;
+}
+
+.trainer_item_content {
+  color: #afafaf;
+  @include font-size(13px);
+  display: none;
+}
+
+.social_trenier {
+  list-style-type: none;
+  display: none;
+}
+
+.tambl_item-four:hover .trainer_item_content {
+  display: block;
+  margin-top: auto;
+}
+
+.tambl_item-four:hover .social_trenier {
+  display: block;
+}
+.gallery_item,
 .trainer_item {
   padding: 0;
   margin: 0;
@@ -187,40 +243,22 @@
   height: auto;
 }
 
-.trainer_item_text {
-  // height: 70px;
-  margin: 0;
-  text-align: left;
-  background-color: #fff;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.trainer_item_box {
-  padding-left: 18px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
 .trainer_item_name {
   @include font-size(14px);
   line-height: (24px/14px);
   font-family: 'OswaldBold', sans-serif;
   color: $color_form;
-  margin-bottom: 5px;
+  margin-bottom: auto;
+  width: 100%;
+  text-transform: uppercase;
 }
 
 .trainer_item_prof {
   color: #afafaf;
   @include font-size(12px);
   font-family: 'OswaldRegular', sans-serif;
-  margin-bottom: 10px;
-}
-
-.social_trenier {
-  list-style-type: none;
+  margin-bottom: 23px;
+  text-transform: uppercase;
 }
 
 .social_trenier li {
@@ -231,10 +269,11 @@
 .social_trenier li a {
   @include font-size(14px);
   color: #afafaf;
+  @include trans;
 }
 
 .social_trenier li a:hover {
-  color: darken(#afafaf, 10%);
+  color: #e25050;
 }
 
 .galary .tambl_item-four .trainer_item_box {
@@ -246,34 +285,39 @@
 }
 
 .gallery_box {
-  display: grid;
-  grid-gap: 0.75rem;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(50px, auto);
-  grid-auto-flow: dense;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   padding: 0;
 }
 
-.gallery_box_items:nth-child(1) {
-  grid-column: 1 / span 2;
-  grid-row: span 2;
+.gallery_box_items {
+  width: 24%;
+  cursor: pointer;
+}
+.gallery_pic {
+  position: relative;
+}
+.gallery_pic img {
+  display: block;
+}
+.gallery_item_fon {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #e25050;
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.8s ease;
 }
 
-.gallery_box_items:nth-child(7) {
-  grid-column: 2 / span 2;
-  grid-row: span 2;
-}
-
-.gallery_box_items:nth-child(12) {
-  grid-column: 3 / span 2;
-  grid-row: span 2;
-}
-
-// .gallery_box_items:nth-child(14) {}
-
-.gallery_box_items:nth-child(15) {
-  grid-column: 1 / span 2;
-  grid-row: span 2;
+.gallery_box_items:hover .gallery_item_fon {
+  height: 100%;
+  opacity: 0.75;
 }
 
 /* оформление цен */
