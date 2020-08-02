@@ -5038,6 +5038,10 @@ a.mPS2id-highlight,
   transition: all 0.8s ease;
 }
 
+.gallery_item_fon img {
+  display: none;
+}
+
 .gallery_box_items:hover .gallery_item_fon {
   height: 100%;
   opacity: 0.75;

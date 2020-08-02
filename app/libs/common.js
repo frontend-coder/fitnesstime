@@ -62,6 +62,62 @@ nav:true,
         }
     });
 
+    $(".gallery_item_fon .icon").magnificPopup({
+        type: "image",
+        tLoading: "Загрузка...",
+        removalDelay: 300,
+        closeOnContentClick: !0,
+        mainClass: "mfp-with-zoom",
+        image: {
+            tError: '<a href="%url%">Работа #%curr%</a> не может загрузится.',
+            titleSrc: function (e) {
+                return e.el.attr("title")
+            }
+        },
+        zoom: {
+            enabled: !0,
+            duration: 300,
+            easing: "ease-in-out",
+            opener: function (e) {
+                return e.is("img") ? e : e.find("img")
+            }
+        },
+        gallery: {
+            navigateByImgClick: !0,
+            preload: [0, 1],
+            enabled: !0,
+            tclose: "Закрыть (Esc)",
+            tPrev: "Предыдущий (левая клавиша на клавиатуре)",
+            tNext: "Следующий (правая клавиша на клавиатуре)",
+            tCounter: "%curr% из %total%"
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // всплывающие окна обратной связи позвонить мне
 $("a[href='#call-back']").magnificPopup ({
   mainClass    : 'mfp-fade',
