@@ -48,7 +48,7 @@ nav:true,
         margin: 30,
         nav: true,
         dots: false,
-        navText: ['<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>', '<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>'],
+        navText: ['<div class="traideslider_fon_icon"><i class="fa fa-angle-left"></i></div>', '<div class="traideslider_fon_icon"><i class="fa fa-angle-right"></i></div>'],
         responsive: {
             0: {
                 items: 1
