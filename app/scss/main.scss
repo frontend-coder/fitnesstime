@@ -128,9 +128,9 @@ body.fix {
 	overflow: hidden;
 }
 
-@import '_header.scss';
-@import '_allstyle.scss';
+@import 'header';
+@import 'allstyle';
 
-@import '_vseforms.scss';
+@import 'vseforms';
 
-@import '_media.scss';
+@import 'media';

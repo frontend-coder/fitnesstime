@@ -1,5 +1,9 @@
 @import '_var.scss';
 
+.container {
+  border: 1px solid orange;
+}
+
 .header_img {
   min-height: 900px;
 }
@@ -48,6 +52,40 @@ a.mPS2id-highlight,
 .top_line_menu ul li a:hover {
   background-color: $red-color;
 }
+
+
+
+#carousel_header .owl-dots {
+  bottom: 10px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+
+}
+
+#carousel_header button.owl-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #353535;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+#carousel_header button.owl-dot.active {
+  background-color: #bd4141;
+}
+
+.header_img .owl-carousel {
+  position: relative;
+}
+
+
+
+
 
 .slider_content {
 

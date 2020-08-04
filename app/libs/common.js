@@ -40,7 +40,30 @@ nav:true,
     navText: ['<div class="slider_fon_icon"><i class="fa fa-angle-left"></i></div>','<div class="slider_fon_icon"><i class="fa fa-angle-right"></i></div>'],
     lazyLoad:true,
     loop:true,
-    margin:10
+    margin: 10,
+    
+    responsive: {
+        0: {
+            nav: false,
+            dots: true,
+        },    
+        570: {
+            nav: true,
+            dots: false,
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
 });
 
     $('#carousel_trade').owlCarousel({
@@ -53,7 +76,10 @@ nav:true,
             0: {
                 items: 1
             },
-            600: {
+            480: {
+                items: 2
+            },
+            642: {
                 items: 3
             },
             1024: {
