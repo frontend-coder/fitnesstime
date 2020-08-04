@@ -1,21 +1,32 @@
 $(document).ready(function() {
 
+    $("#navToggle").click(function () {
+        $(this).toggleClass("active");
+        $(".overlay").toggleClass("open");
+        // this line ▼ prevents content scroll-behind
+        $("body").toggleClass("locked");
+        $(".overlayMenu").toggleClass("skroled");
 
-// вверхнее красиво-вращающееся меню
-// 1 и 2 строка это анимация крестика
-//3 строка - слайдер вниз меню
-$(".toggle-mnu").click(function() {
-$(this).toggleClass("on");
-$(".top_line_menu").slideToggle();
-return false;
-});
-$('body, .top_line_menu ul li a').click(function () {
-$('.hidden-mnu').hide("slow");
-$(".toggle-mnu").removeClass("on");
-});
+    });
+
+
+    $(".overlayMenu ul li a").on('click', function () {
+       $("#navToggle").toggleClass("active");
+       $(".overlay").removeClass("open");
+        $("body").removeClass("locked");
+        $(".overlayMenu").removeClass("skroled");
+   });
+
+
+
+
+
+
+
+
 
     /* Page Scroll to id fn call */
-    $(".top_line_menu ul li a, a.copyright_wrapper_item").mPageScroll2id({
+    $(".overlayMenu ul li a, .top_line_menu ul li a, a.copyright_wrapper_item").mPageScroll2id({
         layout: "auto",
         offset: ".top_line",
         autoScrollSpeed: true,
