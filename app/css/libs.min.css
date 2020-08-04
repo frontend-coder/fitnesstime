@@ -4156,6 +4156,8 @@ html {
   margin: 0;
   padding: 0;
   -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  overflow-x: hidden;
   /* overflow-x: hidden; */
 }
 
@@ -4296,6 +4298,7 @@ body {
   color: #000000;
   opacity: 1;
   -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-font-smoothing: antialised;
   overflow-x: hidden;
 }
@@ -4423,10 +4426,6 @@ body.fix {
   padding: 4px;
   margin-top: 10px;
  } */
-.container {
-  border: 1px solid orange;
-}
-
 .header_img {
   min-height: 900px;
 }
@@ -5462,6 +5461,9 @@ a.mPS2id-highlight,
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 a.copyright_wrapper_item {
@@ -6069,6 +6071,9 @@ input[type=checkbox].css-checkbox:checked + label.css-label-red {
   .footer_box {
     margin: 60px 0 75px 0;
   }
+  .copyright_wrapper {
+    padding-bottom: 20px;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -6298,6 +6303,36 @@ input[type=checkbox].css-checkbox:checked + label.css-label-red {
   }
 }
 
+@media only screen and (max-width: 425px) {
+  .contact_footer_input {
+    width: 100%;
+  }
+  .tambl_item-three {
+    width: 100%;
+    margin-right: 0;
+  }
+  .tambl_item-four {
+    width: 100%;
+    margin-right: 0;
+  }
+  .gallery_box_items {
+    width: 100%;
+  }
+  .contact_footer_textarea {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .footer_submit_contain {
+    width: 50%;
+  }
+  .price_bock_items {
+    width: 100%;
+  }
+  .footer_submit_contain {
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 414px) {
   .top_content {
     padding: 17% 0;
@@ -6367,6 +6402,25 @@ input[type=checkbox].css-checkbox:checked + label.css-label-red {
   }
   .sub_list_description {
     width: 275px;
+  }
+  a.copyright_wrapper_item {
+    display: block;
+    width: 100%;
+    text-align: right;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .galary .owl-carousel .owl-nav button.owl-prev {
+    left: -7%;
+  }
+  .galary .owl-carousel .owl-nav button.owl-next {
+    right: -7%;
+  }
+  .slider_name {
+    font-size: 1.65rem;
   }
 }
 

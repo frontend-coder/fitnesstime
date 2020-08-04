@@ -58,7 +58,8 @@ html {
 	line-height: 1.42;
 	margin: 0;
 	padding: 0;
-	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	overflow-x: hidden;
 	/* overflow-x: hidden; */
 }
 
@@ -75,7 +76,7 @@ body {
 	padding: 0;
 	color: #000000;
 	opacity: 1;
-	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 	-webkit-font-smoothing: antialised;
 	overflow-x: hidden;
 }
